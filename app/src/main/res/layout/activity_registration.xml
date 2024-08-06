@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity.Registration"
+    android:background="@color/backgroundFon">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/head_title_memories"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Memories"
+            android:textColor="@color/black"
+            android:textSize="48sp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:shadowColor="@color/gray_for_shadow"
+            android:shadowDx="-10"
+            android:shadowDy="10"
+            android:shadowRadius="15"
+
+            android:layout_marginStart="10dp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="4dp"
+            android:layout_height="50dp"
+            android:background="@color/black"
+
+            app:layout_constraintStart_toEndOf="@+id/head_title_memories"
+            app:layout_constraintTop_toTopOf="@+id/head_title_memories"
+            app:layout_constraintBottom_toBottomOf="@+id/head_title_memories"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/title_login"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Registration"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/head"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="200dp"
+
+        android:shadowColor="@color/gray_for_shadow"
+        android:shadowDx="-7"
+        android:shadowDy="7"
+        android:shadowRadius="15"
+
+        android:layout_marginStart="10dp"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_next_login"
+
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+
+        app:layout_constraintTop_toTopOf="@+id/username_login"
+        app:layout_constraintBottom_toBottomOf="@+id/password_login"
+        app:layout_constraintEnd_toEndOf="@+id/username_login"
+        android:layout_marginEnd="-35dp"
+
+        android:background="@drawable/btn_next_login_full"
+
+        android:elevation="25dp"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:src="@drawable/baseline_check_24"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/username_login"
+
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/title_login"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/background_for_username"
+
+        android:elevation="20dp">
+
+        <EditText
+            android:id="@+id/edit_username_login"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Username"
+            android:textColorHint="@color/gray_for_shadow"
+            android:paddingStart="10dp"
+            android:textSize="20sp"
+
+            android:background="@null"
+
+            android:fontFamily="@font/josefin_sans_bold"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/password_login"
+
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/username_login"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/background_for_password"
+
+        android:elevation="20dp">
+
+        <EditText
+            android:id="@+id/edit_password_login"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Password"
+            android:textColorHint="@color/gray_for_shadow"
+            android:paddingStart="10dp"
+            android:textSize="20sp"
+
+            android:background="@null"
+
+            android:fontFamily="@font/josefin_sans_bold"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_registration_in_login"
+
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="50dp"
+
+        android:background="@drawable/background_for_registration"
+
+        android:elevation="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:gravity="center"
+
+            android:text="Login"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:textSize="23dp"
+            android:textColor="@color/gray_for_shadow"
+            android:paddingBottom="7dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
