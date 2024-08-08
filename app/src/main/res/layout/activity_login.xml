@@ -122,7 +122,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/background_for_username"
+        android:background="@drawable/corner_right_top"
 
         android:elevation="20dp">
 
@@ -153,7 +153,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/background_for_password"
+        android:background="@drawable/corner_right_bot"
 
         android:elevation="20dp">
 
@@ -175,6 +175,39 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+    <CheckBox
+        android:id="@+id/checkbox_remember_me"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@+id/password_login"
+        app:layout_constraintStart_toStartOf="@id/password_login"
+
+        android:background="@null"
+
+        android:buttonTint="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/text_remember_me"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="remember me"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+
+        app:layout_constraintStart_toEndOf="@+id/checkbox_remember_me"
+        app:layout_constraintTop_toTopOf="@+id/checkbox_remember_me"
+        app:layout_constraintBottom_toBottomOf="@+id/checkbox_remember_me"
+        />
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/btn_registration_in_login"
 
@@ -188,7 +221,7 @@
         android:layout_marginBottom="50dp"
         android:layout_marginEnd="50dp"
 
-        android:background="@drawable/background_for_registration"
+        android:background="@drawable/corner_left_top_bot"
 
         android:elevation="20dp">
 

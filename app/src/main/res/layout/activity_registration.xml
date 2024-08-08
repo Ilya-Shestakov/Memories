@@ -80,7 +80,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/btn_next_login"
+        android:id="@+id/btn_ok_reg"
 
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -122,7 +122,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/background_for_username"
+        android:background="@drawable/corner_right_top"
 
         android:elevation="20dp">
 
@@ -153,7 +153,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/background_for_password"
+        android:background="@drawable/corner_right_bot"
 
         android:elevation="20dp">
 
@@ -176,7 +176,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/btn_registration_in_login"
+        android:id="@+id/btn_login_in_registration"
 
         android:layout_width="200dp"
         android:layout_height="40dp"
@@ -188,7 +188,7 @@
         android:layout_marginBottom="50dp"
         android:layout_marginEnd="50dp"
 
-        android:background="@drawable/background_for_registration"
+        android:background="@drawable/corner_left_top_bot"
 
         android:elevation="20dp">
 

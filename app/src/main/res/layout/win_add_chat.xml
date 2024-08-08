@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@drawable/background_for_win"
+
+    android:elevation="25dp"
+
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/title_find_in_win"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:text="Find"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:paddingStart="10dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/find_chat_in_win"
+
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_find_in_win"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="50dp"
+
+        android:background="@drawable/corner_right_top_bot"
+
+        android:elevation="25dp"
+        >
+
+        <EditText
+            android:id="@+id/edit_text_chat_in_win"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="10dp"
+            android:background="@null"
+
+            android:drawableStart="@drawable/baseline_alternate_email_24"
+
+            android:hint=' ...'
+            android:textSize="20sp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:textColorHint="@color/gray_for_shadow"
+            android:textColor="@color/black"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_check_find_chat"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        app:layout_constraintEnd_toEndOf="@id/find_chat_in_win"
+        app:layout_constraintTop_toBottomOf="@+id/find_chat_in_win"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="-20dp"
+
+        android:background="@drawable/btn_next_login_full"
+
+        android:elevation="25dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:src="@drawable/baseline_check_24"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/text_result_finded"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="find..."
+        android:textSize="20sp"
+        android:textColor="@color/gray_for_shadow"
+        android:fontFamily="@font/josefin_sans_bold"
+        app:layout_constraintTop_toBottomOf="@id/btn_check_find_chat"
+        app:layout_constraintStart_toStartOf="@id/find_chat_in_win"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
