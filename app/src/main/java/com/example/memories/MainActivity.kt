@@ -11,9 +11,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.memories.StartActivity.Login
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
+
+    private lateinit var mAuth: FirebaseAuth
 
     //ID
     lateinit var head_title_memories: TextView
@@ -23,18 +26,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //TOKEN
-        val token = getSharedPreferences("username", Context.MODE_PRIVATE)
-        var token_helper = token.getString("loginusername", "").toString()
-        Toast.makeText(this, "$token_helper", Toast.LENGTH_SHORT).show()
-
         head_title_memories = findViewById(R.id.head_title_memories)
 
-        head_title_memories.setOnClickListener{
+        mAuth = FirebaseAuth.getInstance()
 
-            var editor = token.edit()
-            editor.putString("loginusername", " ")
-            editor.commit()
+        head_title_memories.setOnClickListener{
+            mAuth.signOut()
 
             var intent = Intent(this, Login::class.java)
             startActivity(intent)
